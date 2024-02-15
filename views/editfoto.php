@@ -41,7 +41,7 @@ $tanggal = date("Y-m-d H:i:s");
                     </div>
                     
                     <div class="form-group mt-3">
-                        <textarea class="form-control" name="deskripsifoto" rows="4" placeholder="Deskripsi Foto" value="<?= $edit->deskripsifoto ?>" required></textarea>
+                        <textarea class="form-control" name="deskripsifoto" rows="4" placeholder="Deskripsi Foto"  required><?= $edit->deskripsifoto?></textarea>
                     </div>
                     
                     <div class="mb-3">
