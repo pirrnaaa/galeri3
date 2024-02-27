@@ -13,17 +13,17 @@ $baru = new c_album();
   <main id="main" data-aos="fade" data-aos-delay="1500">
 
     <!-- ======= End Page Header ======= -->
-    <div class="page-header d-flex align-items-center">
-      <div class="container position-relative">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2>Album</h2>
-            <p>Jawa adalah sebuah pulau di Indonesia yang terletak di kepulauan Sunda Besar dan merupakan pulau terluas ke-13 di dunia.Pulau ini terbagi menjadi enam provinsi, yaitu Jawa Barat, Jawa Tengah, Jawa Timur, dan Banten, serta dua wilayah khusus, yaitu DKI Jakarta dan DI Yogyakarta.</p>
-
-          </div>
+    <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h2>Album</h2>
+          <p>Jawa adalah sebuah pulau di Indonesia yang terletak di kepulauan Sunda Besar dan merupakan pulau terluas ke-13 di dunia.Pulau ini terbagi menjadi enam provinsi, yaitu Jawa Barat, Jawa Tengah, Jawa Timur, dan Banten, serta dua wilayah khusus, yaitu DKI Jakarta dan DI Yogyakarta.</p>
+          <a href="tambahalbum.php" class="btn-get-started">Tambah Album</a>
         </div>
       </div>
-    </div><!-- End Page Header -->
+    </div>
+  </section><!-- End Page Header -->
 
     <?php if (empty($baru->read())) { 
       echo'<h3 class="text-secondary"> You is Not Have a Album';

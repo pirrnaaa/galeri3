@@ -65,7 +65,7 @@ include_once "views/validasi_login.php";
                 <div class="card-body">
                 <form action="routers/r_login.php?aksi=login" method="post">
                     <div class="mb-3">
-                      <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" name="email">
+                      <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" name="email" >
                     </div>
                     <div class="mb-3">
                       <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" name="password" >

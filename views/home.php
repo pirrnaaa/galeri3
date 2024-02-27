@@ -12,7 +12,6 @@ $home = new c_foto();
       <div class="row justify-content-center">
         <div class="col-lg-6 text-center">
           <h2>Selamat Datang Di Pameran Foto</h2>
-          <a href="album.php" class="btn-get-started">Album</a>
         </div>
       </div>
     </div>

@@ -6,10 +6,21 @@ include_once "c_conn.php";
 class c_login{
     public function register($userid, $username, $password, $email, $namalengkap, $alamat) {
         $conn = new c_conn();
-        $query = mysqli_query($conn->conn(), "INSERT INTO user VALUES ('$userid', '$username', '$password', '$email', '$namalengkap', '$alamat')");
+        if (isset($_POST['registrasi'])) {
+            $cek =  mysqli_query($conn->conn(), "SELECT * FROM user WHERE email = '$email' OR username = '$username'");
+            $data = mysqli_num_rows($cek);
+            if ($data > 0) {
+                echo "<script> alert('email / username sudah terdaftar');
+                document.location.href = '../registrasi.php';
+                </script>";
+            }else{
+                $query = mysqli_query($conn->conn(), "INSERT INTO user VALUES ('$userid', '$username', '$password', '$email', '$namalengkap', '$alamat')");
+                header("location: ../index.php");
+                exit;
+            }
+            
+        } 
         
-        header("location: ../index.php");
-        exit;
     }
 
     public function login ($email, $password){

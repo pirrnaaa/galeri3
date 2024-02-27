@@ -63,7 +63,6 @@ $userid = $_SESSION['userid'];
         <ul>
           <li><a href="home.php" class="active">Home</a></li>
           <li><a href="album.php">Album</a></li>
-          <li><a href="tambahalbum.php">Upload</a></li>
           <li><a href="../routers/r_login.php?aksi=logout" onclick="return confirm('Apakah Anda Yakin Akan Logout?')" method="POST">Logout</a></li>
         </ul>
       </nav><!-- .navbar -->
