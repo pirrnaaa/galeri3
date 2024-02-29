@@ -1,5 +1,6 @@
 <?php
 
+$side = 'album';
 include_once "../controllers/c_login.php";
 include_once "../controllers/c_album.php";
 include_once "template/header.php";

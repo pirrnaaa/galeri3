@@ -3,8 +3,23 @@ include_once "c_conn.php";
 class c_album{
     public function insert($albumid, $namaalbum, $deskripsi, $tanggaldibuat, $photo, $userid){
         $conn = new c_conn();
-        $query = "INSERT INTO album VALUES ('$albumid', '$namaalbum', '$deskripsi', '$tanggaldibuat', '$photo', '$userid')";
-        $data = mysqli_query($conn->conn(), $query);
+
+        if (isset($_POST['tambahalbum'])) {
+            $cek =  mysqli_query($conn->conn(), "SELECT * FROM album WHERE namaalbum = '$namaalbum' OR photo = '$photo'");
+            $data = mysqli_num_rows($cek);
+            if ($data > 0) {
+                echo "<script> alert('nama album / photo sudah terdaftar');
+                document.location.href = '../views/tambahalbum.php';
+                </script>";
+            }else{
+                $query = mysqli_query($conn->conn(), "INSERT INTO album VALUES ('$albumid', '$namaalbum', '$deskripsi', '$tanggaldibuat', '$photo', '$userid')");
+                header("location: ../views/album.php");
+                exit;
+            }
+            
+        } 
+        // $query = "INSERT INTO album VALUES ('$albumid', '$namaalbum', '$deskripsi', '$tanggaldibuat', '$photo', '$userid')";
+        // $data = mysqli_query($conn->conn(), $query);
         
     }
     public function read(){

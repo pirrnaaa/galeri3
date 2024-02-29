@@ -61,8 +61,12 @@ $userid = $_SESSION['userid'];
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="home.php" class="active">Home</a></li>
-          <li><a href="album.php">Album</a></li>
+          <li><a href="home.php" class="<?php if ($side == 'home') {
+            echo "active";
+          } ?>">Home</a></li>
+          <li><a href="album.php" class="<?php if ($side == 'album') {
+            echo "active";
+          } ?>">Album</a></li>
           <li><a href="../routers/r_login.php?aksi=logout" onclick="return confirm('Apakah Anda Yakin Akan Logout?')" method="POST">Logout</a></li>
         </ul>
       </nav><!-- .navbar -->

@@ -53,7 +53,7 @@ $tanggal = date("Y-m-d H:i:s");
                     </div>
                     
                     <div class="text-center text-secondary">
-                      <input type="submit" class="btn btn-lg btn-secondary btn-lg w-100 mt-4 mb-0" value="Simpan Album">
+                      <input type="submit" class="btn btn-lg btn-secondary btn-lg w-100 mt-4 mb-0" name="tambahalbum" value="Simpan Album">
                     </div>
                   </form>
                 </div>

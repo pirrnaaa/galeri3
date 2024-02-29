@@ -5,7 +5,7 @@ include_once "c_conn.php";
 class c_like {
     public function like($likeid, $fotoid, $userid, $tanggallike) {
         $conn = new c_conn();
-        $query = mysqli_query($conn->conn(), "INSERT INTO likefoto VALUES('$likeid', '$fotoid', '$userid', '$tanggallike')");
+        $query = mysqli_query($conn->conn(), "INSERT INTO likefoto VALUES('$likeid', '$fotoid', '$userid', '$tanggallike')" );
     }
 
     public function user($fotoid, $likeid) {

@@ -1,6 +1,7 @@
 <?php
-include_once "template/header.php";
 
+$side = 'home';
+include_once "template/header.php";
 include_once "../controllers/c_foto.php";
 $home = new c_foto();
 
